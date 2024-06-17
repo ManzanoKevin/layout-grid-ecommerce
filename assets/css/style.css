@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* HEADER */
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* sección completa*/
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 
+        'nav nav nav nav'
+        'menu productos productos productos'
+        'menu productos productos productos'
+        'menu productos productos productos';
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* menú*/
+.menu {
+    grid-area: menu;
+    background-color: rgb(214, 214, 214);
+    padding: 10px;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu .categoria ul li:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.3s ease-in-out;
+    cursor: default;
+}
+
+.disponible {
+    color: #818181;
+}
+
+/* productos */
+.productos {
+    grid-area: productos;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.productos div {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.productos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.productos img:hover {
+    transform: scale(105%);
+}
+
+.productos span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* cards */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* quienes somos*/
+.Somos {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Somos h1, p {
+    text-align: center;
+    margin: 0;
+}
+
+.titulo {
+    padding: 50px;
+}
+
+.texto {
+    padding-bottom: 100px;
+}
+
+.Somos img {
+    height: 15px;
+    padding-bottom: 50px;
+}
+
+/* redes */
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+}
+
+.redes h1 {
+    padding: 60px;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    font-size: 60px;
+    padding-bottom: 100px;
+}
+
+/* footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    grid-column: span 4;
+    font-size: 15px;
+}
